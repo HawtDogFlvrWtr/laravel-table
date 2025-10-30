@@ -65,7 +65,7 @@ class TableFiltersTest extends \Tests\Unit\Bootstrap5\TableFiltersTest
                 // Email
                 '<div wire:ignore>',
                 '<div wire:key="filter-value-email" class="ml-3 mt-2">',
-                '<select wire:model="selectedFilters.filter_value_email"',
+                '<select wire:model.live="selectedFilters.filter_value_email"',
                 ' class="custom-select"',
                 ' placeholder="Email"',
                 ' aria-label="Email">',
@@ -85,7 +85,7 @@ class TableFiltersTest extends \Tests\Unit\Bootstrap5\TableFiltersTest
                 // Email Verified
                 '<div wire:ignore>',
                 '<div wire:key="filter-null-email-verified-at" class="ml-3 mt-2">',
-                '<select wire:model="selectedFilters.filter_null_email_verified_at"',
+                '<select wire:model.live="selectedFilters.filter_null_email_verified_at"',
                 ' class="custom-select"',
                 ' placeholder="Email Verified"',
                 ' aria-label="Email Verified">',
@@ -98,7 +98,7 @@ class TableFiltersTest extends \Tests\Unit\Bootstrap5\TableFiltersTest
                 // Companies
                 '<div wire:ignore>',
                 '<div wire:key="filter-relationship-companies" class="ml-3 mt-2">',
-                '<select wire:model="selectedFilters.filter_relationship_companies"',
+                '<select wire:model.live="selectedFilters.filter_relationship_companies"',
                 ' class="custom-select"',
                 ' placeholder="Companies"',
                 ' aria-label="Companies">',
@@ -118,7 +118,7 @@ class TableFiltersTest extends \Tests\Unit\Bootstrap5\TableFiltersTest
                 // Categories
                 '<div wire:ignore>',
                 '<div wire:key="filter-relationship-categories" class="ml-3 mt-2">',
-                '<select wire:model="selectedFilters.filter_relationship_categories"',
+                '<select wire:model.live="selectedFilters.filter_relationship_categories"',
                 ' class="custom-select"',
                 ' placeholder="Categories"',
                 ' aria-label="Categories">',
@@ -138,7 +138,7 @@ class TableFiltersTest extends \Tests\Unit\Bootstrap5\TableFiltersTest
                 // Active
                 '<div wire:ignore>',
                 '<div wire:key="filter-boolean-active" class="ml-3 mt-2">',
-                '<select wire:model="selectedFilters.filter_boolean_active"',
+                '<select wire:model.live="selectedFilters.filter_boolean_active"',
                 ' class="custom-select"',
                 ' placeholder="Active"',
                 ' aria-label="Active">',
@@ -361,7 +361,7 @@ class TableFiltersTest extends \Tests\Unit\Bootstrap5\TableFiltersTest
                 '<div class="d-flex flex-wrap align-items-center justify-content-end mt-n2">',
                 '<div wire:ignore>',
                 '<div wire:key="filter-boolean-active" class="ml-3 mt-2">',
-                '<select wire:model="selectedFilters.filter_boolean_active"',
+                '<select wire:model.live="selectedFilters.filter_boolean_active"',
                 ' class="custom-select"',
                 ' placeholder="Active"',
                 ' aria-label="Active"',

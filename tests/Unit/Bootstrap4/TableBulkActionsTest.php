@@ -40,12 +40,12 @@ class TableBulkActionsTest extends \Tests\Unit\Bootstrap5\TableBulkActionsTest
             ->assertDontSeeHtml([
                 '<td class="px-0" colspan="',
                 '<th wire:key="bulk-actions" class="align-middle" scope="col">',
-                '<input wire:model="selectAll" class="mr-1" type="checkbox" aria-label="Check all displayed lines">',
+                '<input wire:model.live="selectAll" class="mr-1" type="checkbox" aria-label="Check all displayed lines">',
                 '<a id="bulk-actions-dropdown"',
                 '<ul class="dropdown-menu" aria-labelledby="bulk-actions-dropdown">',
-                '<input wire:model="selectedModelKeys" type="checkbox" value="' . $users->first()->id
+                '<input wire:model.live="selectedModelKeys" type="checkbox" value="' . $users->first()->id
                 . '" aria-label="Check line ' . $users->first()->id . '">',
-                '<input wire:model="selectedModelKeys" type="checkbox" value="' . $users->last()->id
+                '<input wire:model.live="selectedModelKeys" type="checkbox" value="' . $users->last()->id
                 . '" aria-label="Check line ' . $users->last()->id . '">',
             ]);
     }
@@ -92,7 +92,7 @@ class TableBulkActionsTest extends \Tests\Unit\Bootstrap5\TableBulkActionsTest
                 '<tr',
                 '<th wire:key="bulk-actions" class="align-middle" scope="col">',
                 '<div class="d-flex align-items-center">',
-                '<input wire:model="selectAll" class="mr-1" type="checkbox" aria-label="Check all displayed lines">',
+                '<input wire:model.live="selectAll" class="mr-1" type="checkbox" aria-label="Check all displayed lines">',
                 '<div class="dropdown" title="Bulk Actions" data-toggle="tooltip">',
                 '<a id="bulk-actions-dropdown"',
                 'class="dropdown-toggle"',
@@ -149,11 +149,11 @@ class TableBulkActionsTest extends \Tests\Unit\Bootstrap5\TableBulkActionsTest
                 '</thead>',
                 '<tbody>',
                 '<tr wire:key="row-' . $users->first()->id . '" class="border-bottom">',
-                '<input wire:model="selectedModelKeys" type="checkbox" value="' . $users->first()->id
+                '<input wire:model.live="selectedModelKeys" type="checkbox" value="' . $users->first()->id
                 . '" aria-label="Check line ' . $users->first()->id . '">',
                 '</tr>',
                 '<tr wire:key="row-' . $users->last()->id . '" class="border-bottom">',
-                '<input wire:model="selectedModelKeys" type="checkbox" value="' . $users->last()->id
+                '<input wire:model.live="selectedModelKeys" type="checkbox" value="' . $users->last()->id
                 . '" aria-label="Check line ' . $users->last()->id . '">',
                 '</tr>',
                 '</tbody>',
@@ -304,7 +304,7 @@ class TableBulkActionsTest extends \Tests\Unit\Bootstrap5\TableBulkActionsTest
                 '<tr',
                 '<th wire:key="bulk-actions" class="align-middle" scope="col">',
                 '<div class="d-flex align-items-center">',
-                '<input wire:model="selectAll" class="mr-1" type="checkbox" aria-label="Check all displayed lines">',
+                '<input wire:model.live="selectAll" class="mr-1" type="checkbox" aria-label="Check all displayed lines">',
                 '<div class="dropdown" title="Bulk Actions" data-toggle="tooltip">',
                 '<a id="bulk-actions-dropdown"',
                 'class="dropdown-toggle"',
@@ -329,15 +329,15 @@ class TableBulkActionsTest extends \Tests\Unit\Bootstrap5\TableBulkActionsTest
                 '</thead>',
                 '<tbody>',
                 '<tr wire:key="row-' . $user1->id . '" class="border-bottom">',
-                '<input wire:model="selectedModelKeys" type="checkbox" value="' . $user1->id
+                '<input wire:model.live="selectedModelKeys" type="checkbox" value="' . $user1->id
                 . '" aria-label="Check line ' . $user1->id . '">',
                 '</tr>',
                 '<tr wire:key="row-' . $user2->id . '" class="border-bottom">',
-                '<input wire:model="selectedModelKeys" type="checkbox" value="' . $user2->id
+                '<input wire:model.live="selectedModelKeys" type="checkbox" value="' . $user2->id
                 . '" aria-label="Check line ' . $user2->id . '">',
                 '</tr>',
                 '<tr wire:key="row-' . $user3->id . '" class="border-bottom">',
-                '<input wire:model="selectedModelKeys" type="checkbox" value="' . $user3->id
+                '<input wire:model.live="selectedModelKeys" type="checkbox" value="' . $user3->id
                 . '" aria-label="Check line ' . $user3->id . '">',
                 '</tr>',
                 '</tbody>',
