@@ -53,7 +53,7 @@
                                                             {!! config('laravel-table.icon.search') !!}
                                                         </span>
                                                     </div>
-                                                    <input wire:model="searchBy"
+                                                    <input wire:model.defer="searchBy"
                                                            class="form-control"
                                                            placeholder="{{ __('Search by:') }} {{ $searchableLabels }}"
                                                            aria-label="{{ __('Search by:') }} {{ $searchableLabels }}"
@@ -126,7 +126,7 @@
                             <th wire:key="bulk-actions" class="align-middle" scope="col">
                                 <div class="d-flex align-items-center">
                                     {{-- Bulk actions select all --}}
-                                    <input wire:model.live="selectAll" class="mr-1" type="checkbox" aria-label="Check all displayed lines">
+                                    <input wire:model="selectAll" class="mr-1" type="checkbox" aria-label="Check all displayed lines">
                                     {{-- Bulk actions dropdown --}}
                                     <div class="dropdown" title="{{ __('Bulk Actions') }}" data-toggle="tooltip">
                                         <a id="bulk-actions-dropdown"
@@ -190,7 +190,7 @@
                             {{-- Row bulk action selector --}}
                             @if($tableBulkActionsArray)
                                 <td class="align-middle">
-                                    <input wire:model.live="selectedModelKeys" type="checkbox" value="{{ $model->getKey() }}" aria-label="Check line {{ $model->getKey() }}">
+                                    <input wire:model="selectedModelKeys" type="checkbox" value="{{ $model->getKey() }}" aria-label="Check line {{ $model->getKey() }}">
                                 </td>
                             @endif
                             {{-- Row columns values --}}

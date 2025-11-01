@@ -7,7 +7,7 @@ return [
      * Can be set to:
      * - bootstrap-5
      * - bootstrap-4
-     * - tailwind-4
+     * - tailwind-3 (upcoming feature)
      */
     'ui' => 'bootstrap-5',
 
